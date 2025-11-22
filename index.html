@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Apoio para Eventos — Profissionais & Estações</title>
+  <meta name="description" content="Garçom, Copeira, Fritadeira, Monitor, Churrasqueiro e Recepcionista. Estações: Pipoca, Algodão Doce, Açaí, Sorvetes, Batata Frita, Crepe, Suco Natural." />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="imagem/logo.jpg" alt="Logo">
+        <div>
+          <h1>Seu Evento, Nosso Cuidado</h1>
+          <p>Profissionalismo, pontualidade e sabor para tornar seu dia inesquecível</p>
+        </div>
+      </div>
+      <div style="margin-left:auto;color:rgba(255,255,255,0.9)">Contato: (00) 9 9999-9999</div>
+    </header>
+
+     <!-- Painel de carrossel que será trocado quando o usuário clicar na profissao -->
+    <div class="panel">
+      <h2 id="prof-title">Selecione uma profissão para ver os profissionais</h2>
+      <div class="carousel-wrap" id="carousel-area" style="display:none">
+        <div class="arrow left" id="prevBtn">&#10094;</div>
+        <div class="carousel" id="carousel"></div>
+        <div class="arrow right" id="nextBtn">&#10095;</div>
+      </div>
+    </div>
+
+    <!-- Lista de profissões (links) -->
+    <div class="intro">
+      <div style="flex:1"><strong>Profissionais disponíveis:</strong></div>
+      <div class="roles">
+        <div class="role-link" data-target="garcons">Garçom</div>
+        <div class="role-link" data-target="copeiras">Copeira</div>
+        <div class="role-link" data-target="fritadeiras">Fritadeira</div>
+        <div class="role-link" data-target="monitores">Monitor</div>
+        <div class="role-link" data-target="churrasqueiros">Churrasqueiro</div>
+        <div class="role-link" data-target="recepcionistas">Recepcionista</div>
+      </div>
+    </div>
+
+    <!-- Estações de serviço -->
+    <section class="panel" style="margin-top:18px">
+      <h2>Estações de Serviço</h2>
+      <div class="stations">
+        <button class="station-btn" data-img="imagem/pipoca.png" data-title="Pipoca">Pipoca</button>
+        <button class="station-btn" data-img="imagens/algodaod1.jpg" data-title="Algodão Doce">Algodão Doce</button>
+        <button class="station-btn" data-img="imagens/acai1.jpg" data-title="Açaí">Açaí</button>
+        <button class="station-btn" data-img="imagens/sorvete1.jpg" data-title="Sorvetes">Sorvetes</button>
+        <button class="station-btn" data-img="imagens/batatinha1.jpg" data-title="Batata Frita">Batata Frita</button>
+        <button class="station-btn" data-img="imagens/crepe1.jpg" data-title="Crepe">Crepe</button>
+        <button class="station-btn" data-img="imagens/suco1.jpg" data-title="Suco Natural">Suco Natural</button>
+      </div>
+
+      <div class="station-display" id="stationDisplay" style="display:none">
+        <img src="" alt="" id="stationImg">
+        <h3 id="stationTitle"></h3>
+      </div>
+    </section>
+
+    <!-- Formulário -->
+    <section style="margin-top:20px">
+      <form action="mailto:empresa@exemplo.com" method="post" enctype="text/plain">
+        <h2>Solicitar Profissionais para seu Evento</h2>
+        <label for="clientName">Seu nome</label>
+        <input type="text" id="clientName" name="Nome" required>
+        <label for="eventDate">Data do evento</label>
+        <input type="date" id="eventDate" name="Data" required>
+
+        <label for="requested">Quais profissionais deseja (ex: 2 Garçons, 1 Copeira)</label>
+        <input type="text" id="requested" name="Profissionais" placeholder="Ex: 2 Garçons, 1 Copeira" required>
+
+        <label for="contact">Contato (telefone ou WhatsApp)</label>
+        <input type="text" id="contact" name="Contato" placeholder="(00) 9 9999-9999" required>
+
+        <label for="message">Observações (local, horário, etc.)</label>
+        <textarea id="message" name="Observacoes"></textarea>
+
+        <button class="submit" type="submit">Enviar solicitação</button>
+      </form>
+
+      <div class="contact">
+        <p>Ou fale conosco pelo WhatsApp: <a href="https://wa.me/5511999999999" target="_blank">Enviar mensagem</a></p>
+      </div>
+    </section>
+  </div>
+
+</body>
+<script src="script.js"></script>
+</html>
