@@ -1,9 +1,9 @@
  // Dados de exemplo com 5 fotos por profissao (imagens locais)
     const data = {
       garcons: [
-        {img:'imagem/arnaldo.jpg', name:'Arnaldo'},
-        {img:'imagens/garcom2.jpg', name:'Pedro'},
-        {img:'imagens/garcom3.jpg', name:'Lucas'},
+        {img:'imagem/arnaldo-filho.jpg', name:'Arnaldo F'},
+        {img:'imagem/adriana.jpg', name:'Adriana'},
+        {img:'imagem/arnaldo-p.jpeg', name:'Arnaldo P'},
         {img:'imagens/garcom4.jpg', name:'Rafael'},
         {img:'imagens/garcom5.jpg', name:'Bruno'}
       ],
